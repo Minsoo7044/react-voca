@@ -1,4 +1,5 @@
 import data from "../db/data.json";
+import Word from "./Word";
 import { useParams } from "react-router-dom";
 
 function Day() {
@@ -10,14 +11,7 @@ function Day() {
       <table>
         <tbody>
           {wordList.map((word) => (
-            <tr key={word.id}>
-              <td>
-                {word.eng}
-              </td>
-              <td>
-                {word.kor}
-              </td>
-            </tr>
+            <Word word={word}/>
           ))}
         </tbody>
       </table>
